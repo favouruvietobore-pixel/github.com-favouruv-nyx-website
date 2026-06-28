@@ -1,0 +1,63 @@
+{
+  "project": {
+    "name": "NYX",
+    "description": "AI-powered crypto learning platform that helps beginners become confident traders",
+    "lovableProjectId": "nyx",
+    "lovableProjectUrl": "https://lovable.dev/projects/nyx"
+  },
+  "github": {
+    "repository": "favouruvietobore-pixel/github.com-favouruv-nyx-website",
+    "defaultBranch": "main",
+    "syncEnabled": true
+  },
+  "sync": {
+    "codeSync": {
+      "enabled": true,
+      "direction": "two-way",
+      "branches": ["main"],
+      "description": "Automatic two-way sync of code changes between GitHub and Lovable"
+    },
+    "issuesSync": {
+      "enabled": false,
+      "direction": "manual",
+      "description": "GitHub Issues are not automatically synced to Lovable. Use GitHub issue templates to reference Lovable tasks and vice versa.",
+      "linkingStrategy": "cross-reference"
+    }
+  },
+  "workflow": {
+    "issues": {
+      "nameFormat": "[NYX-{number}] {title}",
+      "example": "[NYX-42] Fix cryptocurrency calculation bug",
+      "lovableReference": "Link related Lovable task URL in GitHub issue description",
+      "githubReference": "Link GitHub issue URL in Lovable task comments"
+    },
+    "pullRequests": {
+      "template": "- **Related Issue(s)**: Link to GitHub issues\n- **Related Lovable Task(s)**: Link to Lovable tasks\n- **Description**: Brief summary of changes\n- **Testing**: How to test these changes",
+      "requiresIssueReference": true
+    }
+  },
+  "bestPractices": [
+    "Always connect to Lovable project settings first before making changes",
+    "Make code changes in Lovable and let sync push to GitHub",
+    "Do not rename or delete the GitHub repository after connecting",
+    "Document related Lovable tasks in GitHub issue descriptions using full URLs",
+    "Document related GitHub issues in Lovable task comments using full URLs",
+    "Use consistent naming conventions for cross-repository tracking",
+    "Keep the main branch as the single source of truth for code"
+  ],
+  "setup": {
+    "step1": "Go to Lovable project settings for 'nyx'",
+    "step2": "Navigate to Settings → Connectors → GitHub",
+    "step3": "Authorize Lovable with GitHub account",
+    "step4": "Select this repository: favouruvietobore-pixel/github.com-favouruv-nyx-website",
+    "step5": "Enable two-way sync on the main branch",
+    "step6": "Verify sync is active by checking recent commits"
+  },
+  "troubleshooting": {
+    "syncBroken": "Sync breaks if repository is renamed or deleted. Create a new project in Lovable and reconnect.",
+    "issuesNotSyncing": "GitHub Issues are not natively synced. Use cross-referencing strategy instead (link URLs in issue/task descriptions).",
+    "conflictResolution": "In case of conflicts, Lovable version takes precedence for code sync. Resolve manually in GitHub."
+  },
+  "version": "1.0",
+  "lastUpdated": "2026-06-28"
+}
